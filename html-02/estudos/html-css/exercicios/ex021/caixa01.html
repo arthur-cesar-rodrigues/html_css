@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 {/*elemento box-level (permite colocar as propriedades "width"(largura) e "height"(altura)*/
+            
+            /* para converter um elemento box-level para inline-level, basta criar a seguinte propriedade:
+
+            display: inline;
+            
+            E para fazer o contrário, transformar um elemento inline-level em box-level, basta criar a seguinte propriedade CSS: 
+            display: block;
+            
+            E podemos também transforma um elemento inline ou block em "inline-block" (é um elemento inline-level porém com algumas caracteristicas de elementos block-level: pode adicionar/formatar a largura e a altura do elemento), para fazer isso basta: 
+            
+            display: inline-block*/
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            /*"height" e "width" essas duas propriedades são chamadas de box-size, porque definem o tamanho da caixa*/
+
+
+
+            border: 10px solid darkslategray;
+            /*"border" é uma propriedade shorthand que define a borda, deve ser colocado os valores na seguinte ordem e separado com espaço: largura da borda, estilo da borda e cor da borda, se a pessoa fosse declarar propriedade por propriedade ficaria assim:
+            
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+            */
+
+
+
+            padding: 10px;
+            /*"padding" é outra propriedade shorthand que define o acolchoamento, a sequencia dos valores é (tudo em px): acolchamento de cima, direita, baixo, esquerda; e se as 4 medidas dessa shorthand forem iguais, voce pode colocar o valor uma vez igual acima; e é possível também colocar apenas 2 valores nessa shorthand: padding: 10px 20px(nesse caso o primeiro valor serve para as medidas de cima e embaixo, e o segundo valor os valores dos lados); se fosse para declarar propriedade por propriedade seria: 
+            
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            */
+
+            margin: 20px auto 40px auto;
+            /*"margin" é uma propriedade que define a margem, seus valores funcianam da mesma forma que a shorthand "padding", sequencia dos valores: medida-emcima media-direita medida-baixo medida-esquerda. Para centralizar a caixa/box, é só colocar nas propriedades de lado(direita e esquerda), o valor "auto", igual o exemplo acima.  Se fosse declarar todas as propriedades ficaria: 
+            
+            margin-top: 20px;
+            margin-right: auto;
+            margin-bottom: 40px;
+            margin-left: auto;
+            */
+
+            /*se voce reparar: os valores das propriedades margin e padding são definidos no sentido horario(cima, direita, baixo, esquerda) */
+
+            outline: 5px dashed salmon;
+            /*"outline" é uma propriedade shorthand que define a outline(é a linha entre a margem e a borda, fica dentro da margem), seus valores são definidos como: outline: largura-outline(px) estilo-outline(dashed, solid, dotted, double, groove) cor da outline. Se fossemos declarar todas as propriedades ficaria assim: 
+            
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+            */
+        }
+
+        a {/*este elemento é inline-level*/
+            border: 10px solid red;
+
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa de box-level</h1>
+    <p>Páragrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

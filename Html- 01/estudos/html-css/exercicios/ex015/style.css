@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/*toda palavra seguida de "@" é chamada de regra no css, as regras sempre ficam no inicio do arquivo css (igual o exemplo acima "@charset", que significa que o arquivo "style.css" é compativel com "UTF-8"- compatível com acentuação) */
+
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    color: maroon;
+    background-color: goldenrod;
+}
+
+h2 {
+    color: darkred;         
+}
+
+p {
+    text-align: justify;
+}

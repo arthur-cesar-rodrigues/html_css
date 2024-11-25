@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes com Google Fontes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* para usar fontes externas do google fontes basta acessar o site https://fonts.google.com/ ; depois de acessar o site e escolher a fonte que melhor de encaixa em seu site, selecione a opção "Get font"; depois a opção "<> Get embed code", se precisar remova alguma variação (se houver) se voçê quiser, depois selecione a opção "web"; em seguida a opção "@import", copie o texto dentro da tag style da opção "Embed code in the <head> of your html", e cole este código nas primeiras linhas de seu arquivo CSS (sempre quando importar coloque o código da fonte no começo de seu arquivo CSS). E para poder usar a fonte, na opção "Roboto: CSS classes", copie a linha da "font-family" e cole onde for usar a fonte em seu código CSS. O recomendado em um site é usar entre 3 (recomendado) a 4 tipo (familias) de fontes, um para titulo, outro para destaque e outro para o texto; e quando copiar os códigos do google font, adicionar ";" no final do código */
+            @font-face {
+            font-family: "Love";
+            src: url("fontes/love larry ttf.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Work Sans", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+
+        h1 {
+             font-family: "Love", serif;
+             font-size: 3em;
+             font-weight: normal;
+        }
+        
+        h2 {
+            font-family:"Kaushan Script", sans-serif;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, doloribus distinctio quos dignissimos, a expedita vero animi, quam illo nemo ad consequuntur laudantium sunt quisquam! Porro neque quis vel ipsum.</p>
+    <h2>Subtítulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel qui culpa provident ea similique quam neque. Ex aspernatur laboriosam aut voluptate ea consequuntur assumenda minima sunt nemo. Non, eaque.</p>
+
+</body>
+</html>

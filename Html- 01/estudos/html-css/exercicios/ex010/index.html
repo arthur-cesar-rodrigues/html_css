@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">repositório público no GitHub</a></p><!--<a>= faz uma referencia hipertexto a uma url, ou seja, voce associa um link ao texto dentro da tag; e na tag tem o parâmetro 'href="', é onde voce coloca o link-->
+    <!--'target= "_blank"'= é um parâmetro que faz o link abrir em outra página, e que faz a primeira página não ser fechada-->
+    <!--'rel="external"' = é um parâmetro que indica que o link não faz parte da páfina atual, é um link atual-->
+    <!--é uma boa prática usar os 2 parametros nos links (é claro colocando os valores apropriados nos parametros para cada tipo de site)-->
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a></p>
+
+    <h1>Usando links internos</h1><!--kinks internos= ele faz relação com o nosso servidor, um link que faz referencia a página-->
+    <p>Está é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next">segunda página</a></p><!--'rel="next"'= o link faz referencia a próxima página-->
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next" target="_self">página de notícias</a></p><!--'rel ="_self"'= signifca que o link está fazendo referencia ao próprio site (porem outra página),e por isso, fecha a página que estava-->
+    <h1>Links para dowload</h1>
+    <ul>
+        <li><a href="livro/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>  
+        <li><a href="livro/meulivro.zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li><!--'href="#"' = quando voce nao tem um link, para não deixar o parametro "href" vazio voce coloca o valor "#", que significa link vazio-->
+        <!--para colocar um baixar um arquivo através de um link, é nescessário preencher o parâmetro "href" com a origem do arquivo (pasta, subpasta onde o arquivo está presente, e também criar o parâmetro "dowload" e preencher com o nome do arquivo, e por último criar o parâmetro "type" e preencher com o tipo de "application do seu arquivo", ex:"application/zip", para arquivos zip-->
+    </ul>
+</body>
+</html>

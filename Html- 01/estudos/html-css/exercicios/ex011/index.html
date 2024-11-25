@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente o tamanho do seu navegador.</p>
+
+    <picture><!--picture= permite que você crie varias sources (origem de imagens) dentro dela, sempre comece com a imagem maior e coloque as outras imagens em ordem decrescente (no exemplo abaixo foi a imagem "foto-g.png"); source= no parâmtro "media" sempre coloque entre parenteses "max-width" (largura máxima), o valor colocado nesse parametro é em "px" (pixels, ex: 300px), no parâmetro "srcset" é colocado a origem da imagem que você deseja (ex: imagens/foto-pequena), no parâmetro "type" você coloca o tipo da imagem(png, jpeg..) e sempre quando colocar o tipo da imagem é necessário digitar "image/" antes, ou seja, "image/" + tipo da imagem (ex: "image/png"), resumindo a explicação: você começa com a maior imagem do seu site e vai criando sources com imagens menores, e no parâmetro media voce coloca a condição de cada imagem (ex: ate 1050px de largura  carregue a "imagem media", até 750px carregue a imagem pequena); e na área da largura da imagem coloque sempre 50px a mais para não encostar na barra de rolagem do navegador(50px é a largura da barra) -->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio preload="metadata" controls>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.</p> <a href="midia/guanacast-33.mp3"> Clique aqui para poder baixar o arquivo MP3.</a>
+    </audio><!--tag audio= permite colocar um áudio/música dentro do site, e voce apaga o parâmetro "src", e é necessário criar tambem o parâmetro "preload"= que possui 3 valores: auto (padrão)- o site só carrega quando o site terminar de carregar o audio, "metadata"- carrega apenas algumas informações do audio (nome, data, duração..., é a MELHOR OPÇÃO, porém as vezes o audio demora um pouco para começar porque o navegador esta fazendo o dowload do arquivo), e por último o valor "none"- que não carrega nada do arquivo até voce clicar no play.  Dentro de <audio> você cria o parâmetro "controls" que adiciona ao site um "miniplayer" (com botoes de opção de pause, start e volume no site); e também o atributo (parâmetro) "loop"- que quando o audio termina ele renicia o audio infinitamente ate voce pausar ou fechar a página; a tag audio aceita os formatos: MP3, WAV (evite este formato porque os arquivos wav são muito pesados), OGG. Dentro da tag "audio" voce cria a tag "source:src" onde fica a origem do audio (ex: "src= midia/gunacast-33.mp3"), e a página carrega vai carregar o audio na seuquencia dos sources (debaixo para cima, ex: se não carregar o audio "gunacast.mp3", ele vai carregar o próximo que no caso acima é o "gunacast.ogg" e assim por diante), e se o navegador não conseguir carregar nenhum desses audios ele vai mostrar a mensagem do paragrafo com o link para poder baixar; e no parâmetro "type" voce coloca o tipo de áudio (ex:"type=audio/mpeg"), ou seja, como se fosse um conversor de áudio que mostra pro navegador o formato daquele audio-->
+</body>
+</html>

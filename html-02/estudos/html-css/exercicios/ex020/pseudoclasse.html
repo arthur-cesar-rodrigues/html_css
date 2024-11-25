@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        div {
+            display: inline-block; /*"display: inline-block;"= esta propriedade com esse valor deixa tudo na mesma linha(nessa caso as 3 divs)*/
+            background-color: lightgray;
+            border: 1px solid black; /* "border"= esta é uma propriedade shorthand, que define a largura, ela possui 3 valores: largura(em px), tipo, cor, veja o exemplo acima*/
+            text-align: center;
+            height: 200px; /*"height:"(altura)= propriedade que define a altura, medida em px*/
+            width: 200px; /*"width:" (largura)= propriedade que define a largura, medida em px*/
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+
+        /* pseudo-classes são relacionadas a um elemento(no caso acima todas as tags div) ou a uma classe, as pseudo-classes tem como simbolo ":", ou seja, para inserir um pseudo-classe, voce deve: classe ou elemento + ":" + nome da pseudo-classe. As pseudo-classes trazem a ideia de estado daquele elemento. No exemplo acima, a pseudo-classe "hover", significa passar o mouse sobre a div, e abaixo a estilização, resumindo, quando o usuário passar o mouse sobre as divs, sua cor de fundo vai ficar amarelo */
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

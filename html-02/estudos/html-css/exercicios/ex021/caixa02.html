@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+        }
+        /*"box-shadow"= propriedade responsável pela sombra, possui 4 valores: box-shadow: deslocamento-horizontal(medida em px) deslocamento-vertical(px) espalhamento(px) cor-da-sombra blur(px, é o quanto a sombra vai aumentar em relação ao seu tamanho); podemos colocar o valor "inset" antes dos outros valores, esse valor cria uma sombra dentro da caixa. Entre os valores precisa ter um espaço(backspace), a cor da sombra tem que ser quase transparente, para isso é so mexer na barra de opacidade e sempre escolha o preto*/
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 4px 4px 9px 0px rgb(0, 0, 0, 0.384);
+        }
+        /*"border-radius"= é a propriedade que aumenta ou diminui as raias, ou seja,  arredonda os "vértices" da borda (as pontas da caixa), seu valor é em px (não coloque valores negativos): "border-radius"= raia-superior-esquerda(px) raia-superior-direita(px) raia-inferior-direita(px) raia-inferior-esquerda(px); se as raias do elemento do seu site serem iguais, coloque apenas um valor; e temos a opção de colocar 2 valores: border-radius= 10px(esse primeiro valor configura a raia superior do lado esquerdo e inferior do lado direito) 20px(e esse valor obviamente o contrário, lado direito superior e esquerdo inferior); os valores podem serem colocados em % também*/
+
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+
+        article > aside {
+            background-color: rgb(165, 165, 165);
+        }
+
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        #bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+
+        </nav><!-- "nav"= é uma grouping tag, que é usada para colocar links-->
+    </header> <!--"header" é uma grouping tag (é uma tag para agrupar algo) semãntica, ela é usada para colocar o conteúdo do cabeçalho do site, diferente do "head" que é responsável pelas configurações básicas do site-->
+    
+    <main>
+        <section id="assuntos">
+            <p>Esportes Política Tecnologia</p>
+
+        </section>
+        <!--"section"= tag para colocar sessoes de conteúdo, para separar-->
+
+        <section id="noticias">
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi impedit in voluptate iure sint suscipit sapiente unde asperiores architecto explicabo odio aut eligendi sunt quasi, doloremque quis, velit error? Assumenda.</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+                <!--"aside"= tag responsável para colocar conteúdos periféricos ao artigo, relativo-->
+            </article>
+
+            <article>
+                
+            </article>
+            <!--"article"= tag responsavel para colocar artigos-->
+        </section>
+
+    </main><!--"main" é uma grouping tag (igual div), e é nela que coloca o conteúdo principal do site-->
+
+    <footer>
+        <p>Desenvolvido pelo CursoemVideo</p>
+    </footer><!-- "footer" é uma grouping tag responsável pelo conteúdo do rodapé do site -->
+
+    <div id="bola"></div>
+
+</body>
+</html>

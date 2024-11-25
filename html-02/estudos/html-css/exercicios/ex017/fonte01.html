@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* toda fonte com mais de uma palavra é necessário colocar entre aspas; o comum é colocar mais de uma fonte, igual o exemplo acima, porque se o dispositivo não ter uma dessas fontes ele pula para próxima e assim por diante, isso é chamado de "safe combination, e no fim de toda safe combination é nescessario colocar uma combinação genérica, no ex. acima "sans-serif" (fonte sem serifa); podemos usar também combinações genéricas: serif, sans-serif, mono-space...(usando esse tipo de combinação o navegador vai colocar a primeira fonte que o dispositivo aceitar daquele tipo de fonte); para poder ver todas as fontes básicas basta acessar o site "https://www.w3schools.com/cssref/css_fonts_fallbacks.php"*/
+            font-size: 1em;
+            /*
+            Medidas Absolutas:
+            cm, mm, in (polegada), px, pt (ponto- mesma medida do word), pc (paica)
+
+            Medidas Relativas
+            em (medida relativa ao tamanho atual da fonte- letra maiuscula); ex (medida relativa a altura x da fonte); rem (medida parecida com o "em"  porém relativa ao rut- a fonte que ta configurada no body ou do "*" (cong. global)); vw (view widht - largura da viewport, ou seja, porcentagem da largura da tela); vh (view high- altura da  tela(viewport)); e %; e o "em" e o px são os recomendados e a medida sempre tem que estar junto com o valor: ex: font-size: 0.5px(quando for um valor quebrado colocar ponto inves de virgula); e normalmente o tamanho padrão das fontes é 16 px. E geralmente 16px é igual a 1 em
+            */
+            
+            /* "font-weight:"= propriedade responsavel por definir o peso da fonte (mais magrinha, mais gordinha,..); as fontes podem ter até 4 valores literais: lighter (é o mais leve/fino), normal (meio termo- normal mesmo), bold (negrito), bolder (mais negrito) - não sao todas as fontes que possuem todos esses valores; e existe os valores numéricos que vão de 100 (mesma coisa do lighter) até o 700 (mesma coisa do bolder), porem nem todas as fontes possuem esses valores numéricos */
+
+            
+            /* "font-style:"= é a propriedade que define o estilo da fonte e ela possue 2 valores: "italic" - italico, e "normal" - normal mesmo; algumas fontes não possuem essas variações, para poder usar o valor italic no h1, a fonte precisa ter compatibilidade com o negrito e italico  */
+            
+            /* "text-decoration"= esta propriedade de css permite sublinhar o texto, usando o valor "underline" */
+        }
+
+        h1 {
+            /* 
+            ex:
+            font-family: 'Work Sans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+            "font"= é uma propriedade shorthand (mãozinha), ou seja, é uma propriedade que se pode colocar valores de outra propriedade dentro dela, tudo em apenas uma linha, facilitando o trabalho
+            colocar os valores das seguintes propriedades na ordem: font-style -> font-weight -> font-size -> font-family
+            ao inves de colocar várias propriedades coloque apenas a propriedade "font:" com os valores acima, e todas as propriedades separedas por espaço; acima vemos o jeito normal de editar a fonte e abaixo usando a propriedade font.
+            */
+            font: italic bolder 3em  'Work Sans', sans-serif;
+        }
+
+        h2 {
+           font: bold 2em 'Work Sans'; 
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magni quaerat ipsum quia iusto illo excepturi voluptatem recusandae autem eveniet! Delectus velit, atque nisi quo necessitatibus optio incidunt qui inventore! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim quas, maxime voluptatibus repudiandae quasi nemo adipisci libero placeat neque itaque obcaecati nisi eveniet amet illum fugiat at, exercitationem doloremque. Voluptas.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, hic minima. Quod corporis eius voluptates rerum, velit doloremque esse saepe voluptatibus laboriosam eligendi vel! Repellendus saepe impedit quia cupiditate reiciendis.</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nam qui sed incidunt nesciunt maxime dolore at voluptatibus, ipsa consequatur quae sequi rerum ipsum placeat illo facilis, ab dolor delectus.</p>
+</body>
+</html>

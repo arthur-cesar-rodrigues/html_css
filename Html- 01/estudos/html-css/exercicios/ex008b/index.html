@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-fonte / Pré-formatação</h2>
+    <p>O comando <code>document.getElementById</code> ("teste") é escrito em linguagem JavaScript</p><!--<code> = escreve o texto em código fonte-->
+    <pre>
+        <code>
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é PAR')
+    else:
+        print(f'O número {num} é ÍMPAR')
+    print(Fim do programa)<!--<pre> = escreve o texto dentro da tag da formatação que você escreveu (do jeito que você escreveu)-->
+        </code>
+    </pre>
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q><!--<q>= é a tag usada para colocar citações simples (sem quebra)</p>-->
+    <h2>Citações completas</h2>
+    <p>Segundo Maurício Samy Silva, no seu livro <q>HTML5 A Linguagem de marcação que Revolucionou a Web</q>:</p>
+    <blockquote cite="https://www.google.com.br/books/edition/HTML5_2%C2%AA_Edi%C3%A7%C3%A3o/f7JVBQAAQBAJ?hl=pt-BR&gbpv=1&dq=HTML&printsec=frontcover">
+        Neste capítulo, será apresentada a linguagem de marcação HTML5, relatando-se suas origens, finalidades e destinação. Será feito um breve relato histórico de sua evolução, examinando as motivações que resultaram na sua criação, a filosofia que norteia o desenvolvimento das especificações para a linguagem e as principais diferenças conceituais para as versões anteriores da linguagem HTML.
+    </blockquote><!--<blockquote>= usada para fazer citações compostas (mais elaboradas maiores), o texto selecionado dentro da tag automaticamente tem um quebra de linha e o texto é deslocado para a direito-->
+    <!-- 'cite = ""'= (citando)é um parâmetro dentro das tags, ele faz com que os mecanismo de pesquisa(Google) saibam que voce fez alguma referencia com o link-->
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p><!--<abbr> = é usado nas abreviações, sua função é mostrar o significado da abreviação, o significado é colocado no parâmetro 'title = ""', o significado aparece quando passa o mouse por cima da abreviação-->
+    <h2>Texto invertido</h2>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML</bdo></p><!--<bdo dir= ""> = te permite escolher em que ordem escrever um texto; a direção é colocada no parâmetro "dir" (direção), e possui 2 direções: "ltr" (left to right), escreve o texto como foi escrito; "rtl" (right to left), escreve o texto em ordem invertida -->
+    
+</body>
+</html>

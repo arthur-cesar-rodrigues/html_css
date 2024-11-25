@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradientes em CSS</title>
+    <style>
+        * { /* "*{}" = é a forma de representar as configurações globais dentro das CSS */
+            height: 100%;/*"height": esta propriedade colocada dentro da configuração global permite que o efeito degrade possa ser vizualizado em 100% da tela para qualquer direção do degrade, ele é usado especialmete para poder ver o degrade de cima para baixo*/
+        }
+
+        body {
+            /*para colocar o efeito degrade dentro da página do site é preciso usar a propriedade "background-image: ;"; e dentro dessa propriedade você coloca a função "linear-gradiente()" (linear-gradiente); o primeiro valor dentro da função é a direção do degrade: to right (para direita), to left (para esquerda), to top (para cima), to bottom(para cima), e ou voce pode colocar a direção em graus (ex: 45deg(direção de 45° graus)); os próximos valores separados entre virgula são as cores do degrade (ex:background-image: linear-gradient(to right (direção), white, blue-> este degrade tem a sua direção da esquerda para direita e vai do branco ao azul) e quando for adicionar cores dentro desta função voce pode adicionar quantas cores voce quiser; ao lado dos valores das cores você pode colocar a porcentagem que cada cor vai aparecer na tela (ex:background-image: linear-gradient(to right, red 50%, violet, blue -> vai ser um degrade que começa da esquerda e vai para a direita com um degrade que começa pelo vermelho, passa pelo violeta e termina no azul, e dentro desse degrade metade dele sera na cor vermelha); dentro da propriedade "background-image" existe também a função "radial-gradiente" sua unica diferença para o linear gradiente é que ela faz o degrade através de uma forma e nao de uma direção e o resto dos valores são iguais a outra função (background-image: radial-gradient(circle(forma-degrade), orange, yellow, green-> faz um degrade em forma de circulo começando pela cor laranja, passando pelo amarelo e terminando pelo verde)*/
+            background-image: linear-gradient(to right, #7012FF, #9B00FE, #FE00B8, #FF0066, #FFCA00);
+            background-attachment: fixed;/*"background-attachment: fixed;"= esta propriedade com o valor "fixed", permite que o usuario possa ver o efeito degrade mesmo rolando a barra de rolagem, ou seja, o fundo fica fixo*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Gradientes</h1>
+</body>
+</html>

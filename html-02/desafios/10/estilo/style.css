@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: "android";
+    src: url("../fontes/idroid.otf") format("opentype");
+    font-weight: normal;
+}
+
+/*
+Paleta de cores usada (monocromática- do mais claro ao mais escuro):
+#c5ebd6, #83a1ad, #3ddc84, #2fa866, #1a5c37, #063d1e
+*/
+
+:root {
+    --cor0: #ebe5c5; 
+    --cor1: #83e1ad; 
+    --cor2: #3ddc84; 
+    --cor3: #2fa866; 
+    --cor4: #1a5c37; 
+    --cor5: #063d1e;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: "android", sans-serif; 
+}
+/*":root"= "raiz da arvore do documento css", todo documento css tem, tudo que voce definir dentro dessa pseudo-classe vai servir para o documento inteiro, permite voce criar variáveis dentro dela. Toda variável precisa seguir a seguinte forma: "--" + nomevariavel + ":" + " " + valorvariavel + ";"*/
+
+/* quando é colocado apenas: "caixa elemento{}" em uma configuração (igual na linha 9), significa que voce vai adicionar estilo a qualquer elemento dentro da caixa(ou outro elemento), mesmo o elemento estando dentro de outras caixas; o elemento pode estar dentro da caixa 2 que esta dentro da caixa, não precisa ser filho direto, é tipo primo */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+a.externo::after {
+    content: "\00A0\1F517";/*nessa prorpiedade adicionamos um marcador personalizado depois dos links externos do site*/
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;/*"min-height:"= altura minima de algum elemento, medida em px*/
+    text-align: center;
+    padding-top: 40px;/*"margin-top:"= adiciona uma medida no acolchoamento decima de algum elemento, medida em px*/
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;/*"margin-bottom:"= adiociona uma medida na margem de cima de algum elemento, medida em px, é usado para separar elementos que estão "grudados" ou próximos um do outro (um acima e o outro abaixo)*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);/*"text-shadow:"= adiciona sombra ao texto, os valores são similares a prorpriedade box-shadow, para criar sombrar e vizualizar melhor use o "devtools" que fica dentro do inspecionar da página*/
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;/*"max-width:"= medida da largura maxima de um elemento, em px*/
+    padding-right: 10px;/*"padding-right:"= acolchoamento a direita*/
+    padding-left: 10px; /*"padding-left:"= acolchoamento a esquerda; essas propriedades de acolchoamento tanto da direita quanto esquerda vão evitar que a tela encoste no elemento ao diminuir a tela*/
+    margin: auto;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.418);
+}
+
+nav > a {
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;/*"transition-duration:"= esta propriedade define que quando o mouse é passado sobre os elementos (no nosso caso os links), o efeito de "passagem"/ de transição entre os elemento (entre os links), vai demorar o valor deinido (medida em tempo- s(segundos), ms (milisegundo),...), no nosso caso a transição entre os links vai ser de meio segundo*/
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+}
+
+main {
+    
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;/*faz com que o conteúdo dentro do main sempre fique centralizado no meio da tela, independente do tamanho*/
+    /*as duas propriedades de larura acima significam que se o conteúdo principal tiver mais de 1000px ele para de crescer e ele vai se adaptar até 300px (conforme a tela diminui o bloco main também vai)*/
+    margin-bottom: 30px;/*esta propriedade vai criar uma margem embaixo do bloco main, ou seja, vai criar uma separação entre o main e o rodapé de 30px*/
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;/*cria borda apenas no canto esquerdo inferior*/
+    border-bottom-right-radius: 10px;/*faz o mesmo que o de cima, porém com o canto inferior direito*/
+}
+
+main  h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+
+}
+
+main  h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);/*degrade para direita da cor1 até o transparente*/
+    text-indent: 8px;
+
+
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em; /*"line-height:"= esta propriedade define a altura entre as linhas de algum elemento (espaço entre as linhas), medida em "em"; 1em -> sem espaçamento entre as linhas*/
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main img {
+    width: 100%;/*esta propriedade com este valor vai fazer com que as imagens dentro do main, aumentem ou diminuam conforme a tela diminui ou aumenta (se adapta)*/
+}
+
+main .pequena {
+    max-width: 350px;/*essa configuração de largura, define que a imagem vai ficar com a largura fixa independente do tamanho da tela, mantendo a qualidade da imagem; no nosso caso a imagem original possui 400px de largura, "travando" ela em 350px sua qualidade vai manter e a largura também indepente da tela */
+    display: block; /*a imagem por padrão não é um bloco/caixa, e por isso é necessário criar a propriedade display e o valor block, porque dessa forma a imagem passa a ser um elemento block-level, possibilitando configurações de formatações mais elaboradas (como adicionar a propriedade: margin: auto- que deixa o elemento sempre centralizado na tela independente de seu tamanho, o que vamos fazer abaixo)*/
+    margin: auto;
+
+}
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative; 
+    /* "relative"= para que seja considerado o
+    posicionamento atual do elemento de divisão e que ele se mantenha adaptável para o
+    caso de alteração no tamanho do navegador */
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;/*a propriedade "position" com o valor "absolute" (para que a div torne-se o ponto de partida para o posicionamento do frame.), permite você adicionar as propriedades "top" e "left" */
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    /*essas configurações de margem, padding e border-radius: permitiu o "quer aprender mais" (conteúdo do h3 dentro do aside) se encaixar com o bloco do aside*/
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+aside > ul {
+    list-style-type: "\2714\00A0\00A0";
+    /*"list-style-type:"= adiciona marcador personalizado a lista, usamos o site "emojipedia.org", depois de escolher o marcador personalizado/emoji para colocar em sua lista, entre na área "Techinical Information" e na área "Codepoints" copie o código do "U+" para frente; dentro da propriedade, para adicionar o valor (marcador personalizado): "\" + código do marcador + * "\00A0" (*= essa parte é opcional, ela é conhecida como NBSP - espaço sem quebra, ou seja adiciona um espaço entre o marcador e o texto da lista (<li>))- o valor deve ficar entre aspas; esta propriedade não é compatível com todo navegador */
+    list-style-position: inside;/*"list-style-position:"= esta propriedade em HTML, indica onde vai ficar o simbolo da lista, o valor padrão é "outside"(fora do bloco); no nosso caso usamos o valor "inside" (dentro do bloco), ou seja, o simbolo/demarcação da lista vai ficar dentro do bloco ul */
+    columns: 2;/*"columns:"= esta prorpiedade define em quantas colunas a sua lista vai ficar (divide de forma simetrica, igual), o  valor padrão é 1, porém  quando a lista é muito extensa é interessante dividir essa lista, no nosso caso dividimos ela em 2 colunas*/
+
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;font-size: 0.8em;
+    padding: 5px;
+}
+
+footer > p > a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}

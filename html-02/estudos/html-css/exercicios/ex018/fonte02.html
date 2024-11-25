@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        /*Além do Google Fonts, podemos encontrar outras fontes pela internet, um bom site para baixar fontes é o https://www.dafont.com/pt/ , lá podemos baixar fontes, depois de baixar a fonte é recomendado colocar a fonte em umas pasta separada do index (ex:fontes ()nome da pasta), depois disso, precisamos escrever uma regrinha dentro do arquivo css, essa regra é chamada de "@font-face:" (a primeira opção ou a que tem uma flechinha)= essa fonte permite colocar uma fonte que baixamos em nosso site. Dentro dessa regra temos 2 propriedades: "src" e dentro desta propriedade temos a função "url" que é onde colocamos o nome do arquivo da fonte (se houver espaços no nome do arquivo da fonte tem espaços ou algum caracter esquisito é preciso colocar dentro da função url o nome do arquivo do jeito que ele é) e podemos colocar mais de uma funcão "url", e é só cria-la mais antes de criar e precisa inserir "," e um espaço e automaticamente criar outro format (isso se faz necessário quando a fonte que baixamos vem com mais de um formato, o que facilita tambem a compatibilidade com o navegador, porque se um formato nao funcionar, o outro pode); e é nescessário criar uma função format após o preenchido a função url (nescessário colocar um espaço entre elas), a função "format" define qual o tipo do formato da fonte, cada formato tem um valor diferente, veja a seguir qual colocar:
+        Tipos de format ()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-aat (Apple Advanced Typography)
+        - svg
+        E "font-family", nossa primeira propriedade dentro da regra "@font-face", podemos dar o nome que quisermos para a fonte que baixamos, mais o nome sempre deve estar entre aspas. Podemos criar outras propriedades dentro da regra, como por exemplo: "font-weight", "font-style" - colocando essas propriedades dentro da regra, informa para o navegador que esta fonte com estas configurações funciona melhor, porém isso não garante que quando colocado a fonte na sua página, a fonte vai seguir estas configurações, é uma boa prática... e podemos tamvém misturar fontes sque baixamos com fontes do Google, e as que o VS ja tem, basta importar ou colocar as regras em seu arquivo css.
+         */
+        @font-face {
+            font-family: "Love";
+            src: url("fontes/love larry ttf.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family: "Love", Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatum distinctio nesciunt suscipit ipsam autem nulla nam ut quis facere. Provident commodi ratione repellat, qui distinctio suscipit natus dignissimos reprehenderit.</p>
+</body>
+</html>

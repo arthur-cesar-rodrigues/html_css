@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        
+        /* SELETORES PERSONALIZADOS
+            #  = id
+            .  = class
+            :  = pseudo-class
+            :: = pseudo-element
+            >  = children (filho)
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /*a propriedade "text-decoration" com valor "none", tira o sublinhado de algum elemento, no nosso caso, ele tira o sublinhado dos links*/
+
+        a:visited {
+            color: darkred;
+        }
+        /* ":visited"= essa pseudo-classe faz referencia quando o elemento for visitado, no exemplo acima quando os links forem visitados(acessados) a cor do link vai ficar vermelho escuro*/
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        /* agora a propriedade "text-decoration" com o valor "underline", coloca o sublinhado em algum elemento, no nosso caso, quando o usuário passar o mouse sobre qualquer um dos links, eles vão ficar sublinhados */
+
+        a:active {
+            color: yellow;
+        }
+
+        /*":active"= essa pseudo-classe faz referencia no instante em que o elemento é clicado, para facilitar, no exemplo acima: no instante em que o link for clicado, ele vai ficar amarelo*/
+
+        /*psuedo-classes= definem estados de elementos dentro da HTML*/
+
+        /*pseudo-elementos: ele age nas classes, nos elementos, nas id. Sua função é mexer no conteúdo do periférico do elemetento (adicionar algo). Para representar um pseudo-elemento: elemento + "::" + nome do pseudo-elemento*/
+
+        .especial {
+            background-color: rgb(255, 140, 140);
+        }
+
+        .especial::before {
+            content: "⇒ ";
+        }
+
+        /* "::before" (antes)= faz a mesma coisa que o after porém esse pseudo-elemento adiciona coisas antes do elemento, id ou classe; neste caso ele adicionou uma seta para direita antes do link da classe "especial" ("⇒ ")*/
+
+        .especial::after {
+            content: " ⇐";
+        }
+
+        /* "::after"= esta pseudo-elemento, age (adiciona algo) depois do elemento, classe, ou id digitada; a propriedade "content"= ela adiciona conteúdo, no nosso caso, ela adicionou a mensagem " [link]"; resumindo o exemplo feito: depois do link da classe "especial" (a frete na linha dos links), vai ser adicionado uma seta para esquerda ("⇐")*/
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo/" target="_blank" class="especial">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank" class="especial">Site do CursoemVídeo</a></li>
+    </ul>
+</body>
+</html>

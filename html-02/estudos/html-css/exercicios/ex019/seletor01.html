@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="principal">Criando Site em HTML E CSS</h1><!--"id="= esse parâmetro cria uma identificação para a tag, e dentro desse parâmetro você coloca um valor (nome) que tem a ver com aquela tag, o "id" permite que você possa estilizar/formatar uma tag em específico (personalizar), podemos colocar somente um id com valor específico para cada tag, é um elemento único-->
+    <h1>Aprendendo HTML</h1>
+    <h2 class="basico">HTML básico</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vitae labore, aspernatur unde maxime nemo <span class="basico">eveniet accusantium</span> nam dolorem sed corrupti blanditiis? Molestiae animi expedita explicabo possimus odio recusandae quas?</p>
+
+    <!-- "class="= esta propriedade tem o funcionamento parecido com o "id", sua única diferença é que você pode colocar mais de um elemento com o mesmo valor de classe, um exemplo são os 2 "h2" (uma acima e o outro abaixo, que possuem o mesmo valor, portanto sua formatação vai ser a mesmo porque seus valores de classe é igual)-->
+
+    <!-- o valor que colocar dentro dos parâmetros  "id" e "class" precisam corresponder com suas funções/funcionalidades dentro do HTML (podemos criar "ids" e "classes" em qualquer lugar da página, em tags até palavras ou trechos do texto), e nunca por conta de sua forma, lembre-se da semântica -->
+
+    <!-- <span>= essa tag tem a função de pegar partes de um texto-->
+    
+    <h2 class="intermediario">HTML intermediário</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vitae labore, aspernatur unde maxime nemo eveniet accusantium nam dolorem sed corrupti blanditiis? Molestiae animi expedita explicabo possimus odio recusandae quas?</p>
+    <h2 class="avancado">HTML avançado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vitae labore, aspernatur unde maxime nemo eveniet accusantium nam dolorem sed corrupti blanditiis? Molestiae animi expedita explicabo possimus odio recusandae quas?</p>
+    <h1 class="destaque">Aprendendo CSS</h1>
+    <h2 class="basico">CSS básico</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vitae labore, aspernatur unde maxime nemo eveniet accusantium nam dolorem sed corrupti blanditiis? Molestiae animi expedita explicabo possimus odio recusandae quas?</p>
+    <h2 class="intermediario">CSS intermediário</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vitae labore, aspernatur unde maxime nemo eveniet accusantium nam dolorem sed corrupti blanditiis? Molestiae animi expedita explicabo possimus odio recusandae quas?</p>
+    <h2 class="avancado destaque">CSS avançado</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, vitae labore, aspernatur unde maxime nemo eveniet accusantium nam dolorem sed corrupti blanditiis? Molestiae animi expedita explicabo possimus odio recusandae quas?</p>
+
+    <!-- podemos colocar mais de uma classe dentro de uma tag, igual o exemplo acima, portanto a tag h2 acima vai ter as formatações da class "avancado" e "destaque", para fazer isso é necessário por os valores precisam estar dentro do mesmo par de aspas e separados por um "espaço"(backspace). E também podemos colocar um id e uma classe dentro da mesma tag, porém as configurações de estilização do id vão sobrepor as configurações de estilo da classe -->
+</body>
+</html>

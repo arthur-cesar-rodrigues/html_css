@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            min-width: 280px;
+            max-width: 800px;
+            margin: auto;
+            /* max-width= largura máxima do bloco/caixa; min-width= largura mínima do bloco/caixa, dentro dessa propriedade é recomendado colocar o valor 280px, corresponde a largura de celulares antigos; em ambas propriedades, a medida dos valores são em px (pixels)*/
+            
+        }
+
+        img {
+            width: 100%;
+            /*"width: 100%;"= esta propriedade com este valor, torna a imagem responsiva, ou seja, quando o site diminui a imagem consequentemente diminui também e quando aumenta a imagem aumenta conforme o site*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis placeat error quibusdam consectetur esse. Repudiandae nulla distinctio at tempore nemo voluptatem, quod recusandae excepturi? Enim incidunt unde eveniet expedita delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur iusto vero at est perferendis laudantium adipisci nesciunt, expedita doloribus minima nostrum a in placeat quis dolore magni! Neque, dolores quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsa eligendi! Rerum quisquam minus praesentium, vero illo ad natus numquam. Maxime officiis ut molestiae non corrupti, impedit magnam numquam cumque?</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="./imagens/irina-blok-pq.jpg">
+            <img src="./imagens/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis placeat error quibusdam consectetur esse. Repudiandae nulla distinctio at tempore nemo voluptatem, quod recusandae excepturi? Enim incidunt unde eveniet expedita delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur iusto vero at est perferendis laudantium adipisci nesciunt, expedita doloribus minima nostrum a in placeat quis dolore magni! Neque, dolores quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsa eligendi! Rerum quisquam minus praesentium, vero illo ad natus numquam. Maxime officiis ut molestiae non corrupti, impedit magnam numquam cumque?</p>
+    </main>
+</body>
+</html>

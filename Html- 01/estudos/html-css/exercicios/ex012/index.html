@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <video width="500" poster="imagens/limoes-capa.png" controls loop><!--<video>= permite voce colocar videos no seu site; parâmetro "width" diminui o tamanho do reprodutor de vídeo no site; parâmetro "poster" coloca uma imagem no primeiro frame no vídeo, ou seja, coloca uma imagem como tumb/ capa no vídeo; e o atributo "controls" adiciona um reprodutor de vídeo com botoes(pause, start, volume..); e é sempre indicado colocar varios sources para uma maior compatibilidade de navegadores, e de resto é igual ao funcionamento da tag "audio"-->
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/mp4">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/meu-video.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+    <!--o jeito de colocar vídeos da forma a cima é muito perigosa porque com muitas pessoas navegando em seu site, os visitantes vão consumir muita banda, uma forma de contornar isso é hospedando videos externamente (usando o Vimeo ou YouTube). Vimeo x Youtube: o Vimeo te oferece uma qualidade maior nos vídeos, se voce precisa de uma exclusividade no seu site é uma otima escolha também, e oferece uma maior personalização na incorporação do video no seu site, em contrapartida essa ferramenta é bem cara; agora o Youtube é de graça e qualquer um pode ver esse vídeo, se a exclusividade nao for uma necessidade, é uma excelente escolha. Depois de escolher a melhor ferramenta de hospedagem, basta ir no botão de compartilhar presente na página do video que precisa e clicar na opção incorporar, que te oferece um código em HTML, e depois disso é so copiar o código e colar no seu index. Com isso, você não vai aumentar sua banda nos videos, e todos acessos vao para o site de hospedagem de vídeos escolhido, assim sendo sua página não ficará pesada e será de agradavel acesso-->
+    <h1>Inserindo vídoes do YouTube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GQYVu94I998?si=GSJS_UhTEprmAVno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    <h1>Inserindo vídeos do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/126287950?h=c655f0ff29&title=0" width="560" height="303" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
